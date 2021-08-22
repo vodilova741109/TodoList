@@ -6,18 +6,21 @@ class First {
         }   
 }
 class Second extends First {
-    hello (){
-        First1.hello();
+    hello(){        
         console.log("А я наследуемый метод!");
     }
+    start() {
+        super.hello(); // вызываем родительский метод 
+        this.hello(); // и затем наследуюммый метод
+      }
 }
 
-const First1 = new First();
-const Second1 =  new Second();
+const first1 = new First();
+const second1 =  new Second();
 
 
 
-// Second1.hello1();
 
-Second1.hello();
+
+second1.start();
 
